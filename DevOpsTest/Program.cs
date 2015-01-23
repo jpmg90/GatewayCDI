@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevOpsTest
 {
@@ -11,13 +7,13 @@ namespace DevOpsTest
         static void Main(string[] args)
         {
             Console.Write("Hello FizzBuzz" + Environment.NewLine);
-            
+
             // Loop from 1 to 100
-            for(int index = 1; index <= 100; index++)
+            for (int index = 1; index <= 100; index++)
             {
                 string writeString = index.ToString() + " - ";
                 // Check if multiple of 3 if so Print Fizz
-                if(index%3 == 0)
+                if (index % 3 == 0)
                 {
                     writeString += "Fizz";
                 }
