@@ -1,0 +1,19 @@
+﻿Application Log
+
+Looks as though there's an Unhandled Exception on the GoogleMerchandiseStore application, which is a website running under 
+a Network Service Application pool.
+
+The exception in question is: Unknown Web method undefined, which looks to be an issue with an Ajax call.
+Looking at the Request URL provided it looks as though the Javascript/Jquery is trying to run an Ajax call on 
+https://www.googlemerchandisestore.com:443/shop.aspx/undefined?type=promotion&data=undefined which means there's a jquery/javascript 
+function/call that is attempting to read something off the page for a URL and is failing and then attempting to run that request though Ajax
+to get back some data.
+
+I would go about fixing it by reviewing the jquery call to see which is pulling undefined data and putting in a check or returning out of the function 
+without trying to make the Ajax call. I would then test by finding the page in question that call the Jquery/javascript and debug the browser and 
+review the logs to ensure the exception is no longer thrown.
+
+To non-Technical staff: It looks as though one of the fucntions on the site is trying to access a page that doesn't exist and is failing.
+
+Resources:
+http://www.wenda.io/questions/399898/ajax-call-webpage-method-doesnt-work.html

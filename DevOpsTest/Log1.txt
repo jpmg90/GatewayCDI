@@ -1,0 +1,12 @@
+﻿Schannel System Log:
+
+It looks as though the browser the user is using to access the website does not have the proper ciphers that are accepted by the webserver
+
+It looks to be related to TLS 1.2 and thus sha512 is not supported, work around can be put into place if it's needed by the environment.
+
+To non-Technical Staff: It looks as though a Browser attempted to access the server through SSL, which is a more secure way to access, 
+but the server didn't accepted it because the browsers security wasn't good enough.
+
+Resources:
+http://blogs.technet.com/b/silvana/archive/2014/03/14/schannel-errors-on-scom-agent.aspx
+http://answers.microsoft.com/en-us/windows/forum/windows_7-security/schannel-error-id-36874-and-36888/ae41effc-1b0a-4d55-be23-24835cd7a32e
